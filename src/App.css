@@ -1,0 +1,695 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.banner {
+  background: url('https://c4.wallpaperflare.com/wallpaper/74/321/299/line-oval-light-wallpaper-preview.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.banner h3 {
+  text-transform: capitalize;
+  color: #ffff;
+  font-size: 28px;
+  font-weight: 300;
+  margin: 0px 0px 8px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+
+}
+
+.banner h1 {
+  text-transform: capitalize;
+  color: #ffff;
+  font-size: 56px;
+  font-weight: 700;
+}
+
+.banner img {
+  padding: 40px;
+  margin-top: 30px;
+  margin-bottom: 7rem;
+}
+
+.box h1 span {
+  color: black;
+  font-weight: 300;
+}
+
+.banner p {
+  color: #ffff;
+  font-size: 16px;
+}
+
+.button1 {
+  padding: 10px 18px;
+  color: #ffff;
+  background-color: rgb(4, 41, 4);
+  border-radius: 5px;
+  border-color: rgb(4, 41, 4);
+  text-transform: capitalize;
+  border: 2px solid rgb(4, 41, 4);
+
+}
+
+.button2 {
+  padding: 10px 18px;
+  color: rgb(4, 41, 4);
+  background: none;
+  border-radius: 5px;
+  border: 2px solid rgb(4, 41, 4);
+  text-transform: capitalize;
+
+  &:hover {
+    transition: all 0.3s ease-in;
+    background-color: rgb(4, 41, 4);
+    color: white;
+  }
+}
+
+.box22 {
+  border: 2px solid rgba(255, 255, 255, 0.352);
+  position: absolute;
+  padding: 5rem 11rem;
+}
+
+.box2 img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  /* object-position: top; */
+
+}
+
+.box2 {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #90BC79;
+  padding: 10px 30px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.box2 h5 {
+  margin-top: 10px;
+  color: white;
+  /* padding: 10px; */
+}
+.desc.pink{
+  background-color: pink;
+}
+
+.desc {
+  margin-top: 50px;
+  padding-top: 50px;
+  
+}
+
+.desc h1 span {
+  color: #90BC79;
+  font-weight: 700;
+}
+
+.desc h1 {
+  font-weight: 300;
+}
+
+.desc p {
+  margin-top: 30px;
+  color: rgba(0, 0, 0, 0.651);
+  font-size: 18px;
+}
+
+.desc button {
+  padding: 10px 30px;
+  color: #f4f8f1;
+  background-color: #90BC79;
+  border: unset;
+  border-radius: 5px;
+
+  &:hover {
+    background-color: #abce98;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.img img {
+  margin-top: 50px;
+  /* padding-top: 30px; */
+}
+
+.offertime {
+  background-color: #f4f8f1;
+  height: 80vh;
+  width: 100%;
+  margin-top: 50px;
+  padding: 50px;
+}
+
+.offertime p {
+  color: rgba(0, 0, 0, 0.865);
+  text-align: center;
+  text-transform: capitalize;
+  /* font-size: 18px; */
+}
+
+.offertime h3 {
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+.offertime h1 {
+  color: #90BC79;
+  font-weight: 700;
+  font-size: 60px;
+  text-align: center;
+}
+
+.offertime h5 {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 25px;
+}
+
+.bt1 button {
+  padding: 10px 30px;
+  color: #f4f8f1;
+  background-color: #90BC79;
+  border: unset;
+  border-radius: 5px;
+  text-transform: capitalize;
+  margin-top: 30px;
+
+  &:hover {
+    background-color: #abce98;
+    color: white;
+    transition: all 0.3s ease-in;
+  }
+
+}
+.bt1.red{
+  background-color: red;
+}
+.bt1 {
+  display: flex;
+  justify-content: center;
+}
+
+.deal {
+  background: url('https://c4.wallpaperflare.com/wallpaper/74/321/299/line-oval-light-wallpaper-preview.jpg');
+  background-size: cover;
+  /* background: no-repeat; */
+  margin-top: 60px;
+  padding-top: 50px;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.head h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+  padding: 20px;
+  margin: 0px 21rem;
+}
+
+.head h1 span {
+  color: #90BC79;
+  font-weight: 500;
+
+}
+
+.head p {
+  margin: 0px 20px;
+  text-align: center;
+  text-transform: capitalize;
+  color: rgba(0, 0, 0, 0.678);
+  margin: 0px 21rem;
+}
+
+.use h2 {
+  font-size: 22px;
+  font-weight: 600;
+
+}
+
+.use p {
+  color: rgba(0, 0, 0, 0.678);
+}
+
+.bottle {
+  margin-top: 10px;
+  padding: 30px;
+}
+
+.bottle img {
+  object-fit: cover;
+  height: 400px;
+  width: 300px;
+}
+
+.style hr {
+  width: 80px;
+
+}
+
+.uses {
+  background: url('https://c4.wallpaperflare.com/wallpaper/74/321/299/line-oval-light-wallpaper-preview.jpg');
+  margin-top: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.info h1 {
+  text-transform: capitalize;
+  text-align: center;
+  font-weight: 300;
+  margin: 0px 21rem;
+  padding-top: 6rem;
+}
+
+.info h1 span {
+  color: white;
+  font-weight: 700;
+}
+
+.info p {
+  text-transform: capitalize;
+  text-align: center;
+  color: white;
+  margin: 0px 21rem;
+  padding-top: 3rem;
+}
+
+.info1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: white;
+}
+
+.info1 h3 {
+  margin-top: 30px;
+}
+
+.info1 p {
+  /* margin-top: 30px; */
+  padding: 20px;
+}
+
+.info1 img {
+  margin-top: 30px;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.info1 hr {
+  width: 80px;
+  height: 3px;
+  border: 1px solid rgb(248, 248, 248);
+}
+
+.info1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products {
+  margin-top: 30px;
+}
+
+.products h1 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px 21rem;
+}
+
+.products h1 span {
+  color: #90BC79;
+  font-weight: 700;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.products p {
+  color: rgba(0, 0, 0, 0.71);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 10px 21rem;
+}
+
+.product1 p {
+  font-weight: 700;
+  margin-top: 30px;
+}
+
+.product1 h4 {
+  color: #90BC79;
+}
+
+.product1 button {
+  color: #90BC79;
+  text-transform: capitalize;
+  padding: 5px 20px;
+  border: 3px solid #90BC79;
+  border-radius: 5px;
+  background-color: white;
+
+  &:hover {
+    color: white;
+    background-color: #90BC79;
+    transition: all 0.3s ease-in;
+  }
+}
+
+.product1 {
+  border: 2px solid rgba(197, 194, 194, 0.267);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+:hover.product1 {
+  box-shadow: 0px 2px 6px;
+  transform: scale(1.02);
+  transition: all 0.3s ease-in;
+}
+
+.product1 img {
+  width: 100px;
+  height: 300px;
+}
+
+.hair {
+  margin-top: 30px;
+  padding: 30px;
+  border: 2px solid rgba(194, 189, 189, 0.269);
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.1s ease-in;
+    box-shadow: 0px 2px 6px;
+
+  }
+}
+
+.hair img {
+  width: 330px;
+  height: 220px;
+  /* padding: 30px; */
+}
+
+.hair h4 {
+  margin-top: 30px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: start;
+  text-transform: capitalize;
+}
+
+.blog h1 {
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 300;
+}
+
+.blog h1 span {
+  color: #90BC79;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.blog p {
+  color: #09090a86;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 10px 21rem;
+}
+
+.blog {
+  margin-top: 60px;
+}
+
+.hair p {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.61);
+}
+
+.hair button {
+  padding: 10px 20px;
+  color: #90BC79;
+  text-transform: capitalize;
+  border: 3px solid #90BC79;
+  border-radius: 5px;
+  background-color: white;
+
+  &:hover {
+    color: white;
+    background-color: #90BC79;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in;
+  }
+}
+
+.inpu {
+  background: url('https://c4.wallpaperflare.com/wallpaper/74/321/299/line-oval-light-wallpaper-preview.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 50px;
+  height: 60vh;
+}
+
+.inpu h1 {
+  font-weight: 300;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 60px;
+  margin-top: 30px;
+}
+
+.inpu h1 span {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.inpu p {
+  color: white;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.navbar-collapse {
+  flex-grow: 0 !important;
+}
+
+.animationImage {
+  animation: beat 1.09s infinite alternate;
+}
+
+@keyframes beat {
+  to {
+    transform: scale(1.02);
+  }
+}
+
+.info form input {
+  padding: 10px 80px;
+}
+
+.des2 h1 {
+
+  color: #90BC79;
+  font-weight: 700;
+  font-size: 40px;
+}
+
+.des2 p {
+  color: #05091092;
+  margin-top: 30px;
+}
+
+.h h3 {
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.im img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.im {
+  padding: 0px 30px;
+}
+
+.i img {
+  background-color: white;
+  border-radius: 50%;
+  margin: 10px;
+  width: 35px;
+  height: 35px;
+
+  &:hover {
+    background-color: #90BC79;
+    transition: all 0.5s ease-in;
+  }
+}
+
+.pg p {
+  color: #05091092;
+  padding: 0px;
+
+}
+
+.pg {
+  padding: 0px 0px;
+}
+
+.h dl dd {
+  color: #05091092;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.gt {
+  border-top: 2px solid #f4f8f187;
+
+}
+
+.btn button {
+  padding: 10px 25px;
+  color: white;
+  background-color: rgb(8, 41, 8);
+  border-radius: 5px;
+  border: 2px solid rgb(8, 41, 8);
+}
+
+.nav-item a {
+  color: black;
+  text-transform: capitalize;
+}
+
+.nav-item1 a {
+  color: white !important;
+  text-transform: capitalize;
+
+}
+
+.navbar-brand {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+
+}
+.navbar.scrolled{
+  background-color: #90BC79;
+}
+.navbar{
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+  /* background-color: #90BC79 !important; */
+  position: fixed !important;
+  width: 100%;
+  z-index: 1000;
+}
+
+.inpt input {
+  width: 60%;
+  height: 50px;
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid white;
+  background-color: #90BC79;
+  position: relative;
+  border-radius: 5px;
+}
+
+.inpt i {
+  position: absolute;
+  color: white;
+  font-size: 1.5rem;
+  padding: 35px;
+  margin-left: 50%;
+}
+
+.inpt input:focus-visible {
+  border: 1px solid rgba(255, 255, 255, 0.459) !important;
+  /* For demonstration */
+  outline-style: solid;
+  outline-color: rgba(255, 255, 255, 0.45);
+  outline-width: 2px;
+  /* outline-offset: 10px; */
+}
+
+.tim p {
+  font-size: 20px;
+  font-weight: 200;
+}
