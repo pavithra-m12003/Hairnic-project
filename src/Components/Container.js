@@ -1,14 +1,43 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import tick from '../Components/image/tick.jpg'
 import home from '../Components/image/home.jpg';
 import { Modal } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+
 
 const Container = () => {
 
     const [show, setShow] = useState(false);
     const [get, setGet] = useState({});
-
+    const [second, setSecond] = useState(60);
+    const [mins, setmins] = useState(60)
+    const [hour, setHour] = useState(24)
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setSecond(prevSeconds => prevSeconds - 1);
+        }, 1000);
+        return () => clearInterval(intervalId);
+    }, []);
+    useEffect(() => {
+        if (second === 0) {
+            setmins(prevMins => prevMins - 1);
+            setSecond(60);
+        }
+        else {
+            setmins(mins);
+        }
+    })
+    useEffect(() => {
+        if (mins === 0) {
+            setHour(h => h - 1)
+            setmins(60)
+        }
+        else {
+            setHour(hour);
+        }
+    })
     const handleShow = (data) => {
         debugger;
         setShow(true)
@@ -18,13 +47,19 @@ const Container = () => {
         setShow(false)
     }
     const [color, setColor] = useState(false);
-    const handleColor =()=>{
+    const handleColor = () => {
         setColor(!color);
     }
-    const [deal, setDeal]=useState(false);
-    const handleDeal =()=>{
+    const [deal, setDeal] = useState(false);
+    const handleDeal = () => {
         setDeal(!deal);
     }
+    const pagination = {
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + (index + 1) + '</span>';
+        },
+    };
     // const data = [
     //     {
     //         heading: 'Foods that are good for your hair growing',
@@ -117,7 +152,7 @@ const Container = () => {
                             <img className='animationImage' src='https://themewagon.github.io/hairnic/img/shampoo-1.png' width="100%" />
                         </div>
                     </div>
-                    <div className={`col-lg-6 desc ${color === true ? 'pink': ''}`}>
+                    <div className={`col-lg-6 desc ${color === true ? 'pink' : ''}`}>
                         <h1><span>Healthy Hair </span>Is A Symbol Of Our Beauty</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus, vitae porttitor purus nisl vitae purus. Praesent tristique odio ut rutrum pellentesque. Fusce eget molestie est, at rutrum est.</p>
                         <p>Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo justo et tempor.</p>
@@ -134,7 +169,7 @@ const Container = () => {
                     </div>
 
                     <div className='col-lg-6'>
-                        <div className={`offertime ${deal === true ? 'red' :''}`}>
+                        <div className={`offertime ${deal === true ? 'red' : ''}`}>
                             <p>Natural & Organic Shampoo</p>
                             <h3>Deals of the Day</h3>
                             <h1>$99.99</h1>
@@ -144,14 +179,14 @@ const Container = () => {
                                 <h3>507
                                     <p>days</p>
                                 </h3>
-                                <h3>21
+                                <h3>{hour}
                                     <p>hours</p>
                                 </h3>
 
-                                <h3>35
+                                <h3>{mins}
                                     <p>mins</p>
                                 </h3>
-                                <h3>04
+                                <h3>{second}
                                     <p>secs</p></h3>
                             </div>
 
@@ -322,11 +357,68 @@ const Container = () => {
                     </Modal.Header>
                     <Modal.Body>
                         <h1>{get?.title}</h1>
-                        
+
                     </Modal.Body>
                 </Modal>
             </div>
-            
+            <div>
+                <Swiper
+                    pagination={pagination}
+                    modules={[Pagination]}
+                    className="mySwiper"
+                >
+                    <SwiperSlide>
+
+                        <div className='container-fluid move '>
+                            <h1><span>Our Customer</span> Said About Our Natural Shampoo</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.
+                            </p>
+                            <div className='round1'>
+                                <div className='round'>
+                                    <img src='https://demo.htmlcodex.com/2727/single-product-website-template/img/testimonial-2.jpg' height='120px' width='120px' />
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+                            <h2>Client Name</h2>
+                            <p><i>Profession</i></p>
+                        </div>
+
+
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <div className='container-fluid move '>
+                            <h1><span>Our Customer</span> Said About Our Natural Shampoo</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.
+                            </p>
+                            <div className='round1'>
+                                <div className='round'>
+                                    <img src='https://demo.htmlcodex.com/2727/single-product-website-template/img/testimonial-2.jpg' height='120px' width='120px' />
+                                </div>
+                            </div> 
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+                            <h2>Client Name</h2>
+                            <p><i>Profession</i></p>
+                        </div>
+
+                    </SwiperSlide>
+
+                    <SwiperSlide>
+                        <div className='container-fluid move '>
+                            <h1><span>Our Customer</span> Said About Our Natural Shampoo</h1>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.
+                            </p>
+                            <div className='round1'>
+                                <div className='round'>
+                                    <img src='https://demo.htmlcodex.com/2727/single-product-website-template/img/testimonial-2.jpg' height='120px' width='120px' />
+                                </div>
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aliquet, erat non malesuada consequat, nibh erat tempus risus.</p>
+                            <h2>Client Name</h2>
+                            <p><i>Profession</i></p>
+                        </div>
+                    </SwiperSlide>
+                </Swiper>
+            </div>
             <div className='inpu '>
                 <h1>Let's Subscribe <span>The Newsletter</span></h1>
                 <p>Subscribe now to get 30% discount on any of our products</p>
